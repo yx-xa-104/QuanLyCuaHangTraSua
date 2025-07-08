@@ -194,25 +194,25 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\FoodAndDrinksBLL.cs" />
-    <Compile Include="BLL\TableManagementBLL.cs" />
-    <Compile Include="BLL\RevenueBLL.cs" />
-    <Compile Include="BLL\SettingBLL.cs" />
-    <Compile Include="DAO\AccountDAO.cs" />
-    <Compile Include="DTO\Account.cs" />
-    <Compile Include="DAO\BillDAO.cs" />
-    <Compile Include="DAO\BillInfoDAO.cs" />
-    <Compile Include="DAO\CategoryDAO.cs" />
-    <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DAO\FoodDAO.cs" />
-    <Compile Include="DAO\MenuDAO.cs" />
-    <Compile Include="DAO\TableDAO.cs" />
-    <Compile Include="DTO\Bill.cs" />
-    <Compile Include="DTO\BillInfo.cs" />
-    <Compile Include="DTO\Category.cs" />
-    <Compile Include="DTO\Food.cs" />
-    <Compile Include="DTO\Menu.cs" />
-    <Compile Include="DTO\Table.cs" />
+    <Compile Include="Business Logic Layer\FoodAndDrinksBLL.cs" />
+    <Compile Include="Business Logic Layer\TableManagementBLL.cs" />
+    <Compile Include="Business Logic Layer\RevenueBLL.cs" />
+    <Compile Include="Business Logic Layer\SettingBLL.cs" />
+    <Compile Include="Data Access Object\AccountDAO.cs" />
+    <Compile Include="Data Transfer Object\Account.cs" />
+    <Compile Include="Data Access Object\BillDAO.cs" />
+    <Compile Include="Data Access Object\BillInfoDAO.cs" />
+    <Compile Include="Data Access Object\CategoryDAO.cs" />
+    <Compile Include="Data Access Object\DataProvider.cs" />
+    <Compile Include="Data Access Object\FoodDAO.cs" />
+    <Compile Include="Data Access Object\MenuDAO.cs" />
+    <Compile Include="Data Access Object\TableDAO.cs" />
+    <Compile Include="Data Transfer Object\Bill.cs" />
+    <Compile Include="Data Transfer Object\BillInfo.cs" />
+    <Compile Include="Data Transfer Object\Category.cs" />
+    <Compile Include="Data Transfer Object\Food.cs" />
+    <Compile Include="Data Transfer Object\Menu.cs" />
+    <Compile Include="Data Transfer Object\Table.cs" />
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,7 +269,7 @@
     <Compile Include="UserControls\ucTableManagement.Designer.cs">
       <DependentUpon>ucTableManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\SessionManager.cs" />
+    <Compile Include="Utilities\SessionManager.cs" />
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,53 +385,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Icons\bill.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\Food And Drinks\7up.jpg" />
-    <Content Include="Images\Food And Drinks\BanhKemDau.jpg" />
-    <Content Include="Images\Food And Drinks\BanhKemSocola.png" />
-    <Content Include="Images\Food And Drinks\BanhMatcha.jpg" />
-    <Content Include="Images\Food And Drinks\BurgerBo.jpg" />
-    <Content Include="Images\Food And Drinks\BurgerBoPhoMai.jpg" />
-    <Content Include="Images\Food And Drinks\BurgerGaCay.jpg" />
-    <Content Include="Images\Food And Drinks\BurgerGaCayPhoMai.jpg" />
-    <Content Include="Images\Food And Drinks\CanhGaSotCay.jpg" />
-    <Content Include="Images\Food And Drinks\CanhGaSotMatOng.jpg" />
-    <Content Include="Images\Food And Drinks\Coca.jpg" />
-    <Content Include="Images\Food And Drinks\Cupcake.jpg" />
-    <Content Include="Images\Food And Drinks\Donut.jpg" />
-    <Content Include="Images\Food And Drinks\DuiGaChien.jpg" />
-    <Content Include="Images\Food And Drinks\DuiGaChienMam.jpg" />
-    <Content Include="Images\Food And Drinks\GaVienChien.jpg" />
-    <Content Include="Images\Food And Drinks\GaVienChienPhoMai.jpg" />
-    <Content Include="Images\Food And Drinks\KemTuoi.jpg" />
-    <Content Include="Images\Food And Drinks\KhoaiTayChien.jpg" />
-    <Content Include="Images\Food And Drinks\KhoaiTayChienLacPhoMai.jpg" />
-    <Content Include="Images\Food And Drinks\KhoaiTayNghien.jpg" />
-    <Content Include="Images\Food And Drinks\MatchaLatte.jpg" />
-    <Content Include="Images\Food And Drinks\MiBo.jpg" />
-    <Content Include="Images\Food And Drinks\MiCay.jpg" />
-    <Content Include="Images\Food And Drinks\MiTronIndomie.jpeg" />
-    <Content Include="Images\Food And Drinks\MiTuongDen.jpg" />
-    <Content Include="Images\Food And Drinks\MiY.jpg" />
-    <Content Include="Images\Food And Drinks\MiYSotKem.jpg" />
-    <Content Include="Images\Food And Drinks\NuocCam.jpg" />
-    <Content Include="Images\Food And Drinks\NuocChanh.jpg" />
-    <Content Include="Images\Food And Drinks\NuocEpTao.jpg" />
-    <Content Include="Images\Food And Drinks\NuocLoc.jpg" />
-    <Content Include="Images\Food And Drinks\PhoMaiQue.jpg" />
-    <Content Include="Images\Food And Drinks\PizzaBo.jpg" />
-    <Content Include="Images\Food And Drinks\PizzaChicago.jpg" />
-    <Content Include="Images\Food And Drinks\PizzaHaiSan.jpg" />
-    <Content Include="Images\Food And Drinks\PizzaMargherita.jpg" />
-    <Content Include="Images\Food And Drinks\PizzaPepperonis.jpg" />
-    <Content Include="Images\Food And Drinks\SaladGa.jpg" />
-    <Content Include="Images\Food And Drinks\SaladRauCu.jpg" />
-    <Content Include="Images\Food And Drinks\SuaChua.jpg" />
-    <Content Include="Images\Food And Drinks\Tiramisu.jpg" />
-    <Content Include="Images\Food And Drinks\TraSuaNguyenVi.jpg" />
-    <Content Include="Images\Food And Drinks\TraSuaTranChauDuongDen.jpg" />
-    <Content Include="Images\LoginBg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
