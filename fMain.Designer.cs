@@ -21,7 +21,7 @@
         }
 
         #region Windows Form Designer generated code
-
+        private System.Windows.Forms.Panel pnlMain;
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
-            System.Windows.Forms.Panel pnlMain;
             this.timerMenu = new System.Windows.Forms.Timer(this.components);
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -51,7 +50,7 @@
             this.btnTable = new System.Windows.Forms.Button();
             this.pnlFoodAndDrinks = new System.Windows.Forms.Panel();
             this.btnFoodAndDninks = new System.Windows.Forms.Button();
-            pnlMain = new System.Windows.Forms.Panel();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlTop.SuspendLayout();
             this.pnlTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbToggleMenu)).BeginInit();
@@ -134,12 +133,12 @@
             // 
             // pnlMain
             // 
-            pnlMain.BackColor = System.Drawing.Color.LavenderBlush;
-            pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            pnlMain.Location = new System.Drawing.Point(240, 74);
-            pnlMain.Name = "pnlMain";
-            pnlMain.Size = new System.Drawing.Size(1040, 654);
-            pnlMain.TabIndex = 2;
+            this.pnlMain.BackColor = System.Drawing.Color.LavenderBlush;
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(240, 74);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1040, 654);
+            this.pnlMain.TabIndex = 2;
             // 
             // pnlTableManagement
             // 
@@ -349,7 +348,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 728);
-            this.Controls.Add(pnlMain);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlTop);
             this.DoubleBuffered = true;

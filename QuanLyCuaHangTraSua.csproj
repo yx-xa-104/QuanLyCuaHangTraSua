@@ -59,6 +59,12 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.6.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=8.0.7.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.8.0.7\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.Interfaces.8.0.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
     </Reference>
@@ -116,6 +122,9 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.12.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Tokens.8.12.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
@@ -128,7 +137,11 @@
     <Reference Include="System.ClientModel, Version=1.4.2.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>packages\System.ClientModel.1.4.2\lib\netstandard2.0\System.ClientModel.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.DiagnosticSource.9.0.6\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
@@ -168,6 +181,9 @@
     </Reference>
     <Reference Include="System.Security.Cryptography.ProtectedData, Version=9.0.0.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Security.Cryptography.ProtectedData.9.0.6\lib\net462\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Xml.8.0.2\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
@@ -227,46 +243,46 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\ucAccountManagement.cs">
+    <Compile Include="User Controls\ucAccountManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucAccountManagement.Designer.cs">
+    <Compile Include="User Controls\ucAccountManagement.Designer.cs">
       <DependentUpon>ucAccountManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucCategory.cs">
+    <Compile Include="User Controls\ucCategory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucCategory.Designer.cs">
+    <Compile Include="User Controls\ucCategory.Designer.cs">
       <DependentUpon>ucCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucFoodAndDrinks.cs">
+    <Compile Include="User Controls\ucFoodAndDrinks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucFoodAndDrinks.Designer.cs">
+    <Compile Include="User Controls\ucFoodAndDrinks.Designer.cs">
       <DependentUpon>ucFoodAndDrinks.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucRevenue.cs">
+    <Compile Include="User Controls\ucRevenue.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucRevenue.Designer.cs">
+    <Compile Include="User Controls\ucRevenue.Designer.cs">
       <DependentUpon>ucRevenue.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucSetting.cs">
+    <Compile Include="User Controls\ucSetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucSetting.Designer.cs">
+    <Compile Include="User Controls\ucSetting.Designer.cs">
       <DependentUpon>ucSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucTable.cs">
+    <Compile Include="User Controls\ucTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucTable.Designer.cs">
+    <Compile Include="User Controls\ucTable.Designer.cs">
       <DependentUpon>ucTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucTableManagement.cs">
+    <Compile Include="User Controls\ucTableManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucTableManagement.Designer.cs">
+    <Compile Include="User Controls\ucTableManagement.Designer.cs">
       <DependentUpon>ucTableManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\SessionManager.cs" />
@@ -286,25 +302,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\ucAccountManagement.resx">
+    <EmbeddedResource Include="User Controls\ucAccountManagement.resx">
       <DependentUpon>ucAccountManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucCategory.resx">
+    <EmbeddedResource Include="User Controls\ucCategory.resx">
       <DependentUpon>ucCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucSetting.resx">
+    <EmbeddedResource Include="User Controls\ucSetting.resx">
       <DependentUpon>ucSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucTable.resx">
+    <EmbeddedResource Include="User Controls\ucTable.resx">
       <DependentUpon>ucTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucFoodAndDrinks.resx">
+    <EmbeddedResource Include="User Controls\ucFoodAndDrinks.resx">
       <DependentUpon>ucFoodAndDrinks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucRevenue.resx">
+    <EmbeddedResource Include="User Controls\ucRevenue.resx">
       <DependentUpon>ucRevenue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucTableManagement.resx">
+    <EmbeddedResource Include="User Controls\ucTableManagement.resx">
       <DependentUpon>ucTableManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -321,7 +337,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Invoice\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Images\Icons\Account .png" />
   </ItemGroup>

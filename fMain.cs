@@ -11,10 +11,9 @@ namespace QuanLyCuaHangTraSua
 
         // Khai báo biến toàn cục trong MainForm
         bool isMenuExpanded = true; // Ban đầu menu đang mở rộng
-
         public fMain()
         {
-            InitializeComponent();
+            InitializeComponent();          
             OpenChildUserControl(new ucTableManagement(), "Quản lý bàn");
             SetMenuByRole(); // Thiết lập menu dựa trên vai trò người dùng
         }
@@ -35,8 +34,8 @@ namespace QuanLyCuaHangTraSua
             currentChildUserControl = userControl;
             userControl.Dock = DockStyle.Fill; // Đảm bảo User Control lấp đầy Panel
 
-            pnlMain.Controls.Clear();    // Xóa tất cả các controls hiện có trong panel
-            pnlMain.Controls.Add(userControl); // Thêm User Control mới vào panel
+            this.pnlMain.Controls.Clear();    // Xóa tất cả các controls hiện có trong panel
+            this.pnlMain.Controls.Add(userControl); // Thêm User Control mới vào panel
         }
 
         public void SettingUC_DisplayNameChanged(object sender, EventArgs e)
