@@ -87,7 +87,7 @@ namespace QuanLyCuaHangTraSua.UserControls
             cbSwitchTable.DisplayMember = "Name";
         }
 
-        private void ExportBillToPdf(string tableName, List<DTO_Menu> billItems, int discount, double finalPrice)
+        private void ExportBillToPdf(string tableName, List<DTO_Menu> billItems, int discount, double finalPrice, int invoiceId, string creatorName)
         {
             // Sử dụng SaveFileDialog để người dùng chọn vị trí lưu file PDF
             SaveFileDialog saveFileDialog = new SaveFileDialog
@@ -98,12 +98,12 @@ namespace QuanLyCuaHangTraSua.UserControls
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {             
-                Document doc = new Document(PageSize.A4);
+                Document doc = new Document(PageSize.A5);
                 BaseFont bf; // Khai báo BaseFont
                 try
                 {
-                    // Thử tạo font Arial để hỗ trợ tiếng Việt
-                    // Cần đảm bảo file arial.ttf tồn tại trên hệ thống
+                    // Tạo font Arial để hỗ trợ tiếng Việt
+                    // Đảm bảo file arial.ttf tồn tại trên hệ thống
                     bf = BaseFont.CreateFont("c:\\windows\\fonts\\arial.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 }
                 catch (DocumentException)
@@ -120,13 +120,13 @@ namespace QuanLyCuaHangTraSua.UserControls
                 }
 
                 // Định nghĩa các font sử dụng trong PDF
-                iTextSharp.text.Font titleFont = new iTextSharp.text.Font(bf, 16, iTextSharp.text.Font.BOLD);
-                iTextSharp.text.Font normalFont = new iTextSharp.text.Font(bf, 9, iTextSharp.text.Font.NORMAL);
-                iTextSharp.text.Font boldFont = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.BOLD);
-                iTextSharp.text.Font itemFontBlue = new iTextSharp.text.Font(bf, 9, iTextSharp.text.Font.NORMAL, BaseColor.BLUE);
-                iTextSharp.text.Font itemFontGreen = new iTextSharp.text.Font(bf, 9, iTextSharp.text.Font.NORMAL, BaseColor.GREEN);
-                iTextSharp.text.Font itemFontRed = new iTextSharp.text.Font(bf, 9, iTextSharp.text.Font.NORMAL, BaseColor.RED);
-                iTextSharp.text.Font totalSummaryFont = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.BOLD);
+                iTextSharp.text.Font titleFont = new iTextSharp.text.Font(bf, 18, iTextSharp.text.Font.BOLD);
+                iTextSharp.text.Font normalFont = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.NORMAL);
+                iTextSharp.text.Font boldFont = new iTextSharp.text.Font(bf, 13, iTextSharp.text.Font.BOLD);
+                iTextSharp.text.Font itemFontBlue = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLUE);
+                iTextSharp.text.Font itemFontGreen = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.NORMAL, BaseColor.GREEN);
+                iTextSharp.text.Font itemFontRed = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.NORMAL, BaseColor.RED);
+                iTextSharp.text.Font totalSummaryFont = new iTextSharp.text.Font(bf, 15, iTextSharp.text.Font.BOLD);
 
 
                 try
@@ -134,10 +134,12 @@ namespace QuanLyCuaHangTraSua.UserControls
                     PdfWriter.GetInstance(doc, new FileStream(saveFileDialog.FileName, FileMode.Create));
                     doc.Open();
 
-                    // Tiêu đề hóa đơn
+                    // Thêm tiêu đề và thông tin hóa đơn
                     Paragraph title = new Paragraph($"HÓA ĐƠN THANH TOÁN - {tableName}", titleFont);
                     title.Alignment = Element.ALIGN_CENTER;
                     doc.Add(title);
+                    doc.Add(new Paragraph($"Mã hóa đơn: {invoiceId}", normalFont));
+                    doc.Add(new Paragraph($"Người tạo hóa đơn: {creatorName}", normalFont)); 
                     doc.Add(new Paragraph("Ngày: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"), normalFont));
                     doc.Add(Chunk.NEWLINE);
 
@@ -203,7 +205,7 @@ namespace QuanLyCuaHangTraSua.UserControls
                 }
             }
         }
-        private void ExportToExcel(List<DTO_Menu> billItems, string tableName, int discount, double finalPrice)
+        private void ExportToExcel(List<DTO_Menu> billItems, string tableName, int discount, double finalPrice, int invoiceId, string creatorName)
         {
             // Sử dụng SaveFileDialog để người dùng chọn vị trí lưu file Excel
             SaveFileDialog saveFileDialog = new SaveFileDialog
@@ -220,30 +222,40 @@ namespace QuanLyCuaHangTraSua.UserControls
                 {
                     ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("HoaDon");
 
+                    // Thêm tiêu đề và thông tin hóa đơn
+                    worksheet.Cells[1, 1].Value = "HÓA ĐƠN THANH TOÁN";
+                    worksheet.Cells[2, 1].Value = $"Bàn: {tableName}";
+                    worksheet.Cells[3, 1].Value = $"Mã hóa đơn: {invoiceId}";
+                    worksheet.Cells[4, 1].Value = $"Người tạo hóa đơn: {creatorName}";
+                    worksheet.Cells[5, 1].Value = $"Ngày: {DateTime.Now:dd/MM/yyyy HH:mm:ss}";
+
+                    // Bắt đầu dữ liệu món ăn từ dòng 7
+                    int dataStartRow = 7;
+
                     // Thêm tiêu đề cột
-                    worksheet.Cells[1, 1].Value = "Tên món";
-                    worksheet.Cells[1, 2].Value = "Số lượng";
-                    worksheet.Cells[1, 3].Value = "Đơn giá";
-                    worksheet.Cells[1, 4].Value = "Thành tiền";
+                    worksheet.Cells[dataStartRow - 1, 1].Value = "Tên món";
+                    worksheet.Cells[dataStartRow - 1, 2].Value = "Số lượng";
+                    worksheet.Cells[dataStartRow - 1, 3].Value = "Đơn giá";
+                    worksheet.Cells[dataStartRow - 1, 4].Value = "Thành tiền";
 
                     // Thêm dữ liệu từ List<DTO_Menu>
                     for (int i = 0; i < billItems.Count; i++)
                     {
-                        worksheet.Cells[i + 2, 1].Value = billItems[i].FoodName;
-                        worksheet.Cells[i + 2, 2].Value = billItems[i].Count;
-                        worksheet.Cells[i + 2, 3].Value = billItems[i].Price;
-                        worksheet.Cells[i + 2, 4].Value = billItems[i].TotalPrice;
+                        worksheet.Cells[i + dataStartRow, 1].Value = billItems[i].FoodName;
+                        worksheet.Cells[i + dataStartRow, 2].Value = billItems[i].Count;
+                        worksheet.Cells[i + dataStartRow, 3].Value = billItems[i].Price;
+                        worksheet.Cells[i + dataStartRow, 4].Value = billItems[i].TotalPrice;
                     }
 
                     // Thêm mục giảm giá và tổng tiền cuối cùng
-                    int nextRow = billItems.Count + 3; // Dòng tiếp theo sau dữ liệu món ăn và một dòng trống
+                    int nextRow = billItems.Count + dataStartRow + 1; // Dòng tiếp theo sau dữ liệu món ăn và một dòng trống
 
                     worksheet.Cells[nextRow, 3].Value = "Giảm giá:";
                     worksheet.Cells[nextRow, 4].Value = $"{discount}%";
 
                     nextRow++; // Chuyển xuống dòng tiếp theo
                     worksheet.Cells[nextRow, 3].Value = "Tổng tiền phải trả:";
-                    worksheet.Cells[nextRow, 4].Value = finalPrice.ToString("N0", new CultureInfo("vi-VN")); // Định dạng tiền tệ
+                    worksheet.Cells[nextRow, 4].Value = finalPrice.ToString("N0", new CultureInfo("vi-VN"));
 
                     worksheet.Cells.AutoFitColumns();
 
@@ -338,6 +350,8 @@ namespace QuanLyCuaHangTraSua.UserControls
                 return;
             }
 
+            // Lấy tên người xuất hóa đơn từ tài khoản đang đăng nhập
+            string creatorName = SessionManager.CurrentAccount != null ? SessionManager.CurrentAccount.DisplayName : "N/A";
             // Lấy danh sách món ăn HIỆN TẠI của hóa đơn TRƯỚC KHI thanh toán
             List<DTO_Menu> currentBillItems = tableBLL.GetMenuByTable(table.ID);
 
@@ -368,9 +382,10 @@ namespace QuanLyCuaHangTraSua.UserControls
                 "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
-                {     
-                    ExportBillToPdf(table.Name, currentBillItems, discount, finalPrice);
-                    ExportToExcel(currentBillItems, table.Name, discount, finalPrice);
+                {
+                    ExportBillToPdf(table.Name, currentBillItems, discount, finalPrice, idBill, creatorName); 
+                    ExportToExcel(currentBillItems, table.Name, discount, finalPrice, idBill, creatorName); 
+
 
                     tableBLL.CheckOut(idBill, discount, finalPrice);
                     tableBLL.UpdateTableStatus(table.ID, "Trống");

@@ -38,7 +38,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pnlTenDangNhap = new System.Windows.Forms.Panel();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbDangNhap = new System.Windows.Forms.PictureBox();
             this.pnlDangNhap.SuspendLayout();
@@ -50,14 +49,13 @@
             // 
             // pnlDangNhap
             // 
-            this.pnlDangNhap.BackColor = System.Drawing.Color.LavenderBlush;
+            this.pnlDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
             this.pnlDangNhap.Controls.Add(this.pbOnOff);
             this.pnlDangNhap.Controls.Add(this.btnLogin);
             this.pnlDangNhap.Controls.Add(this.label4);
             this.pnlDangNhap.Controls.Add(this.label3);
             this.pnlDangNhap.Controls.Add(this.pnlMatKhau);
             this.pnlDangNhap.Controls.Add(this.pnlTenDangNhap);
-            this.pnlDangNhap.Controls.Add(this.label2);
             this.pnlDangNhap.Controls.Add(this.label1);
             this.pnlDangNhap.Controls.Add(this.pbDangNhap);
             this.pnlDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -82,10 +80,12 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Coral;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
             this.btnLogin.Location = new System.Drawing.Point(443, 351);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(202, 43);
@@ -98,7 +98,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.label4.Location = new System.Drawing.Point(366, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 21);
@@ -109,7 +109,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.label3.Location = new System.Drawing.Point(366, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 21);
@@ -118,7 +118,7 @@
             // 
             // pnlMatKhau
             // 
-            this.pnlMatKhau.BackColor = System.Drawing.Color.SaddleBrown;
+            this.pnlMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.pnlMatKhau.Controls.Add(this.txtPassword);
             this.pnlMatKhau.Location = new System.Drawing.Point(369, 278);
             this.pnlMatKhau.Name = "pnlMatKhau";
@@ -128,10 +128,11 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.LavenderBlush;
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.txtPassword.Location = new System.Drawing.Point(1, 1);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(363, 38);
@@ -140,7 +141,8 @@
             // 
             // pnlTenDangNhap
             // 
-            this.pnlTenDangNhap.BackColor = System.Drawing.Color.SaddleBrown;
+            this.pnlTenDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
+            this.pnlTenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlTenDangNhap.Controls.Add(this.txtUserName);
             this.pnlTenDangNhap.Location = new System.Drawing.Point(369, 198);
             this.pnlTenDangNhap.Name = "pnlTenDangNhap";
@@ -150,33 +152,23 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.BackColor = System.Drawing.Color.LavenderBlush;
+            this.txtUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold);
-            this.txtUserName.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.txtUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold);
+            this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.txtUserName.Location = new System.Drawing.Point(1, 1);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(363, 38);
+            this.txtUserName.Size = new System.Drawing.Size(361, 38);
             this.txtUserName.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label2.Location = new System.Drawing.Point(365, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(308, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Bắt đầu quản lý cửa hàng của bạn!";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(360, 67);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
+            this.label1.Location = new System.Drawing.Point(360, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 54);
             this.label1.TabIndex = 2;
@@ -184,6 +176,7 @@
             // 
             // pbDangNhap
             // 
+            this.pbDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
             this.pbDangNhap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbDangNhap.BackgroundImage")));
             this.pbDangNhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbDangNhap.Location = new System.Drawing.Point(0, 0);
@@ -219,7 +212,6 @@
         private System.Windows.Forms.Panel pnlDangNhap;
         private System.Windows.Forms.PictureBox pbDangNhap;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlTenDangNhap;
         private System.Windows.Forms.Panel pnlMatKhau;
         private System.Windows.Forms.TextBox txtPassword;

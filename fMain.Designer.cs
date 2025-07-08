@@ -6,7 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private System.Windows.Forms.Panel pnlMain;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -21,7 +21,6 @@
         }
 
         #region Windows Form Designer generated code
-        private System.Windows.Forms.Panel pnlMain;
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -71,7 +70,7 @@
             // 
             // pnlTop
             // 
-            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
             this.pnlTop.Controls.Add(this.lblTitle);
             this.pnlTop.Controls.Add(this.pnlTopMenu);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -86,7 +85,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(10)))), ((int)(((byte)(5)))));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.lblTitle.Location = new System.Drawing.Point(633, 21);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(64, 32);
@@ -96,7 +95,7 @@
             // 
             // pnlTopMenu
             // 
-            this.pnlTopMenu.BackColor = System.Drawing.Color.Peru;
+            this.pnlTopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.pnlTopMenu.Controls.Add(this.lblDisplayName);
             this.pnlTopMenu.Controls.Add(this.pbToggleMenu);
             this.pnlTopMenu.Location = new System.Drawing.Point(1, 0);
@@ -111,7 +110,7 @@
             this.lblDisplayName.AutoSize = true;
             this.lblDisplayName.BackColor = System.Drawing.Color.Transparent;
             this.lblDisplayName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplayName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(10)))), ((int)(((byte)(5)))));
+            this.lblDisplayName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.lblDisplayName.Location = new System.Drawing.Point(71, 21);
             this.lblDisplayName.Name = "lblDisplayName";
             this.lblDisplayName.Size = new System.Drawing.Size(165, 32);
@@ -131,15 +130,6 @@
             this.pbToggleMenu.TabStop = false;
             this.pbToggleMenu.Click += new System.EventHandler(this.pbToggleMenu_Click);
             // 
-            // pnlMain
-            // 
-            this.pnlMain.BackColor = System.Drawing.Color.LavenderBlush;
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(240, 74);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1040, 654);
-            this.pnlMain.TabIndex = 2;
-            // 
             // pnlTableManagement
             // 
             this.pnlTableManagement.BackColor = System.Drawing.Color.Transparent;
@@ -154,10 +144,11 @@
             // 
             this.btnTableManagement.BackColor = System.Drawing.Color.Transparent;
             this.btnTableManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTableManagement.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
-            this.btnTableManagement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
+            this.btnTableManagement.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnTableManagement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.btnTableManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTableManagement.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.btnTableManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.btnTableManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnTableManagement.Image")));
             this.btnTableManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTableManagement.Location = new System.Drawing.Point(-10, -10);
@@ -171,7 +162,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
             this.pnlMenu.Controls.Add(this.pnlRevenue);
             this.pnlMenu.Controls.Add(this.pnlAccountManagement);
             this.pnlMenu.Controls.Add(this.pnlTableManagement);
@@ -198,10 +189,11 @@
             // btnRevenue
             // 
             this.btnRevenue.BackColor = System.Drawing.Color.Transparent;
-            this.btnRevenue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
-            this.btnRevenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
+            this.btnRevenue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnRevenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.btnRevenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.btnRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.btnRevenue.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Revenue;
             this.btnRevenue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRevenue.Location = new System.Drawing.Point(-10, -10);
@@ -226,10 +218,11 @@
             // btnAccountManager
             // 
             this.btnAccountManager.BackColor = System.Drawing.Color.Transparent;
-            this.btnAccountManager.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
-            this.btnAccountManager.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
+            this.btnAccountManager.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnAccountManager.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.btnAccountManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccountManager.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.btnAccountManager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.btnAccountManager.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Account_;
             this.btnAccountManager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccountManager.Location = new System.Drawing.Point(-10, -10);
@@ -256,10 +249,11 @@
             // btnCategory
             // 
             this.btnCategory.BackColor = System.Drawing.Color.Transparent;
-            this.btnCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
-            this.btnCategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
+            this.btnCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnCategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.btnCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.btnCategory.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Category;
             this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategory.Location = new System.Drawing.Point(-10, -10);
@@ -297,10 +291,11 @@
             // btnTable
             // 
             this.btnTable.BackColor = System.Drawing.Color.Transparent;
-            this.btnTable.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
-            this.btnTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
+            this.btnTable.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.btnTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.btnTable.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Food_Table;
             this.btnTable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTable.Location = new System.Drawing.Point(-9, -12);
@@ -326,10 +321,11 @@
             // btnFoodAndDninks
             // 
             this.btnFoodAndDninks.BackColor = System.Drawing.Color.Transparent;
-            this.btnFoodAndDninks.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
-            this.btnFoodAndDninks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(145)))), ((int)(((byte)(83)))));
+            this.btnFoodAndDninks.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnFoodAndDninks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.btnFoodAndDninks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFoodAndDninks.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.btnFoodAndDninks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.btnFoodAndDninks.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Food;
             this.btnFoodAndDninks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFoodAndDninks.Location = new System.Drawing.Point(-10, -10);
@@ -342,13 +338,22 @@
             this.btnFoodAndDninks.UseVisualStyleBackColor = false;
             this.btnFoodAndDninks.Click += new System.EventHandler(this.btnFoodAndDninks_Click);
             // 
+            // pnlMain
+            // 
+            pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlMain.Location = new System.Drawing.Point(240, 74);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Size = new System.Drawing.Size(1040, 654);
+            pnlMain.TabIndex = 2;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 728);
-            this.Controls.Add(this.pnlMain);
+            this.Controls.Add(pnlMain);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlTop);
             this.DoubleBuffered = true;
