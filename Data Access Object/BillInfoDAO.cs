@@ -50,5 +50,26 @@ namespace QuanLyCuaHangTraSua.DAO
             object result = DataProvider.Instance.ExecuteScalar(query);
             return result != null ? Convert.ToDecimal(result) : 0;
         }
+        public decimal GetTotalMoneyByDate(DateTime date)
+        {
+            // Tính tổng TotalPrice của các hóa đơn đã thanh toán (status = 1)
+            string query = @"
+        SELECT ISNULL(SUM(TotalPrice), 0)
+        FROM dbo.Bill
+        WHERE CAST(dateCheckOut AS DATE) = CAST(@date AS DATE) AND status = 1";
+            object result = DataProvider.Instance.ExecuteScalar(query, new object[] { date });
+            return result != null ? Convert.ToDecimal(result) : 0;
+        }
+
+        public int GetTotalInvoiceByDate(DateTime date)
+        {
+            // Đếm số hóa đơn đã thanh toán (status = 1)
+            string query = @"
+        SELECT COUNT(*)
+        FROM dbo.Bill
+        WHERE CAST(dateCheckOut AS DATE) = CAST(@date AS DATE) AND status = 1";
+            object result = DataProvider.Instance.ExecuteScalar(query, new object[] { date });
+            return result != null ? Convert.ToInt32(result) : 0;
+        }
     }
 }

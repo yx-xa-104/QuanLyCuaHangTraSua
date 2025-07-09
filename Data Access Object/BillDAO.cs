@@ -97,5 +97,10 @@ namespace QuanLyCuaHangTraSua.DAO
             string query = "EXEC USP_GetListBillByDate @checkIn , @checkOut";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { checkIn, checkOut });
         }
+        public DataTable GetListBillByDate(DateTime date)
+        {
+            // Sử dụng lại phương thức cũ nhưng với checkIn và checkOut là cùng một ngày
+            return GetListBillByDate(date, date);
+        }
     }
 }

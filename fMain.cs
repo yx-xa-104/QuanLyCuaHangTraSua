@@ -1,30 +1,32 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using QuanLyCuaHangTraSua.DAO;
+using QuanLyCuaHangTraSua.User_Controls;
 using QuanLyCuaHangTraSua.UserControls;
-using QuanLyCuaHangTraSua.DAO;
+using System;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace QuanLyCuaHangTraSua
 {
     public partial class fMain: Form
     {
         private UserControl currentChildUserControl; // Để theo dõi User Control đang hiển thị
-
+               
         // Khai báo biến toàn cục trong MainForm
         bool isMenuExpanded = true; // Ban đầu menu đang mở rộng
         public fMain()
         {
-            InitializeComponent();          
-            OpenChildUserControl(new ucTableManagement(), "Quản lý bàn");
+            InitializeComponent();
+            // Mở trang tổngg quan khi khởi động ứng dụng
+            button1_Click(button1, EventArgs.Empty);
             SetMenuByRole(); // Thiết lập menu dựa trên vai trò người dùng
         }
 
         #region Method
-        private void OpenChildUserControl(UserControl userControl, string title)
+        private void OpenChildUserControl(UserControl userControl, string title, Control activeControl)
         {
             // Cập nhật Text của Label tiêu đề
             lblTitle.Text = title; // lblTitle là tên của Label trên top
-            lblDisplayName.Text = AccountDAO.Instance.GetAccountByUserName(SessionManager.CurrentAccount.UserName).DisplayName;
-
+            lblCurrentUser.Text = SessionManager.CurrentAccount.DisplayName;
             // Nếu đã có User Control đang hiển thị, giải phóng nó
             if (currentChildUserControl != null)
             {
@@ -36,12 +38,11 @@ namespace QuanLyCuaHangTraSua
 
             this.pnlMain.Controls.Clear();    // Xóa tất cả các controls hiện có trong panel
             this.pnlMain.Controls.Add(userControl); // Thêm User Control mới vào panel
+          
         }
 
         public void SettingUC_DisplayNameChanged(object sender, EventArgs e)
-        {
-            // Cập nhật lại tên hiển thị trên giao diện
-            lblDisplayName.Text = SessionManager.CurrentAccount.DisplayName;
+        {                    
         }
 
         private void SetMenuByRole()
@@ -67,74 +68,45 @@ namespace QuanLyCuaHangTraSua
                 // Hiện các nút khác tương tự
             }
         }
+                    
         #endregion
 
-        #region Event
-        private void pbToggleMenu_Click(object sender, EventArgs e)
-        {
-            timerMenu.Start();
-            lblDisplayName.Visible = !lblDisplayName.Visible; // Ẩn/hiện tên hiển thị khi click vào biểu tượng menu
-        }
-
-        private void timerMenu_Tick(object sender, EventArgs e)
-        {
-            if (isMenuExpanded)
-            {
-                pnlTopMenu.Width -= 15;
-                pnlMenu.Width -= 15;
-                if (pnlMenu.Width <= 80 && pnlTopMenu.Width <= 80)
-                {
-                    isMenuExpanded = false;
-                    timerMenu.Stop();
-                }
-            }
-            else
-            {
-                pnlTopMenu.Width += 15;
-                pnlMenu.Width += 15;
-                if (pnlMenu.Width >= 240 && pnlTopMenu.Width <= 240)
-                {
-                    isMenuExpanded = true;
-                    timerMenu.Stop();
-                }
-            }
-        }
-
+        #region Event              
         private void btnAccountManager_Click(object sender, EventArgs e)
         {
-            OpenChildUserControl(new ucAccountManagement(), "Quản lý tài khoản");
+            OpenChildUserControl(new ucAccountManagement(), "Quản lý tài khoản", (Control)sender);
         }
 
         private void btnTable_Click(object sender, EventArgs e)
         {
-            OpenChildUserControl(new ucTable(), "Bàn ăn");
+            OpenChildUserControl(new ucTable(), "Bàn ăn", (Control)sender);
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            OpenChildUserControl(new ucCategory(), "Danh mục");
+            OpenChildUserControl(new ucCategory(), "Danh mục", (Control)sender);
         }
 
         private void btnRevenue_Click(object sender, EventArgs e)
         {
-            OpenChildUserControl(new ucRevenue(), "Doanh thu");
+            OpenChildUserControl(new ucRevenue(), "Doanh thu", (Control)sender);
         }
 
         private void btnFoodAndDninks_Click(object sender, EventArgs e)
         {
-            OpenChildUserControl(new ucFoodAndDrinks(), "Thức ăn và đồ uống");
+            OpenChildUserControl(new ucFoodAndDrinks(), " Đồ uống", (Control)sender);
         }
 
         private void btnTableManagement_Click(object sender, EventArgs e)
         {
-            OpenChildUserControl(new ucTableManagement(), "Quản lý bàn");
+            OpenChildUserControl(new ucTableManagement(), "Quản lý bàn", (Control)sender);
         }
 
         private void pbSetting_Click(object sender, EventArgs e)
         {
             var settingUC = new ucSetting();
             settingUC.DisplayNameChanged += SettingUC_DisplayNameChanged;
-            OpenChildUserControl(new ucSetting(), "Cài đặt");
+            OpenChildUserControl(new ucSetting(), "Cài đặt", (Control)sender);
         }
 
         private void fMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -144,6 +116,17 @@ namespace QuanLyCuaHangTraSua
                 e.Cancel = true;
             }
         }
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(new ucDashboard(), "Tổng quan", button1);
+        }
         #endregion
+
+
     }
 }

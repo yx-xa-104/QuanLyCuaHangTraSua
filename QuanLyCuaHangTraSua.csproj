@@ -255,6 +255,12 @@
     <Compile Include="User Controls\ucCategory.Designer.cs">
       <DependentUpon>ucCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\ucDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ucDashboard.Designer.cs">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\ucFoodAndDrinks.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ucCategory.resx">
       <DependentUpon>ucCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ucDashboard.resx">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ucSetting.resx">
       <DependentUpon>ucSetting.cs</DependentUpon>
