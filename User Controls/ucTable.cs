@@ -53,7 +53,7 @@ namespace QuanLyCuaHangTraSua.UserControls
                 txtID.Text = "";
                 txtID.Enabled = false; // Không cho sửa ID khi thêm mới
                 txtTableName.Text = "";
-                cbStatus.SelectedIndex = -1; // hoặc cbStatus.Text = "";
+                cbStatus.SelectedIndex = -1;
                 txtTableName.ReadOnly = false;
                 cbStatus.Enabled = true;
                 btnEdit.Enabled = false;
@@ -139,15 +139,28 @@ namespace QuanLyCuaHangTraSua.UserControls
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtID.Text);
-            if (TableDAO.Instance.DeleteTable(id))
+            if (string.IsNullOrEmpty(txtID.Text))
             {
-                MessageBox.Show("Xóa bàn thành công");
-                LoadTable();
+                MessageBox.Show("Vui lòng chọn một bàn để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            int id = Convert.ToInt32(txtID.Text);
+
+            // Sử dụng MessageBox để xác nhận trước khi xóa
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa bàn này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("Xóa bàn thất bại");
+                // Gọi phương thức DeleteTable đã được cập nhật
+                if (TableDAO.Instance.DeleteTable(id))
+                {
+                    MessageBox.Show("Xóa bàn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadTable(); // Tải lại danh sách bàn
+                }
+                else
+                {
+                    // Hiển thị thông báo lỗi thân thiện nếu không xóa được
+                    MessageBox.Show("Xóa bàn thất bại! Bàn này có thể đang được sử dụng hoặc đã có hóa đơn liên quan.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

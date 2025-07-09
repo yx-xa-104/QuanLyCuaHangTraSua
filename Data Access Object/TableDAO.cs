@@ -55,8 +55,19 @@ namespace QuanLyCuaHangTraSua.DAO
         }
         public bool DeleteTable(int id)
         {
-            string query = "DELETE dbo.TableFood WHERE id = @id";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            // Kiểm tra xem có hóa đơn nào liên quan đến bàn này không
+            string checkBillQuery = "SELECT COUNT(*) FROM dbo.Bill WHERE idTable = @id";
+            int billCount = (int)DataProvider.Instance.ExecuteScalar(checkBillQuery, new object[] { id });
+
+            // Nếu có hóa đơn tồn tại, không cho xóa và trả về false
+            if (billCount > 0)
+            {
+                return false; // Trả về false để báo hiệu việc xóa không thành công do có ràng buộc
+            }
+
+            // Nếu không có hóa đơn nào, tiến hành xóa như bình thường
+            string deleteQuery = "DELETE dbo.TableFood WHERE id = @id";
+            int result = DataProvider.Instance.ExecuteNonQuery(deleteQuery, new object[] { id });
             return result > 0;
         }
     }

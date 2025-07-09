@@ -73,20 +73,20 @@
             this.lblAccountDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
             this.lblAccountDetail.Location = new System.Drawing.Point(44, 40);
             this.lblAccountDetail.Name = "lblAccountDetail";
-            this.lblAccountDetail.Size = new System.Drawing.Size(250, 32);
+            this.lblAccountDetail.Size = new System.Drawing.Size(249, 32);
             this.lblAccountDetail.TabIndex = 0;
-            this.lblAccountDetail.Text = "◆ Thông tin cá nhân";
+            this.lblAccountDetail.Text = "▼ Thông tin cá nhân";
             // 
             // lblChangePassword
             // 
             this.lblChangePassword.AutoSize = true;
             this.lblChangePassword.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.lblChangePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.lblChangePassword.Location = new System.Drawing.Point(44, 308);
+            this.lblChangePassword.Location = new System.Drawing.Point(517, 40);
             this.lblChangePassword.Name = "lblChangePassword";
-            this.lblChangePassword.Size = new System.Drawing.Size(196, 32);
+            this.lblChangePassword.Size = new System.Drawing.Size(195, 32);
             this.lblChangePassword.TabIndex = 5;
-            this.lblChangePassword.Text = "◆ Đổi mật khẩu";
+            this.lblChangePassword.Text = "▼ Đổi mật khẩu";
             // 
             // btnSignOut
             // 
@@ -213,7 +213,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.label4.Location = new System.Drawing.Point(79, 356);
+            this.label4.Location = new System.Drawing.Point(552, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 25);
             this.label4.TabIndex = 6;
@@ -224,7 +224,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.label5.Location = new System.Drawing.Point(79, 410);
+            this.label5.Location = new System.Drawing.Point(552, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 25);
             this.label5.TabIndex = 7;
@@ -235,7 +235,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.label6.Location = new System.Drawing.Point(79, 460);
+            this.label6.Location = new System.Drawing.Point(552, 192);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 25);
             this.label6.TabIndex = 8;
@@ -247,7 +247,7 @@
             this.panel4.Controls.Add(this.btnToggleOldPassword);
             this.panel4.Controls.Add(this.txtOldPassword);
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(10)))), ((int)(((byte)(5)))));
-            this.panel4.Location = new System.Drawing.Point(221, 350);
+            this.panel4.Location = new System.Drawing.Point(694, 82);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(1);
             this.panel4.Size = new System.Drawing.Size(232, 35);
@@ -285,7 +285,7 @@
             this.panel5.Controls.Add(this.btnToggleNewPassword);
             this.panel5.Controls.Add(this.txtNewPassword);
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(10)))), ((int)(((byte)(5)))));
-            this.panel5.Location = new System.Drawing.Point(221, 404);
+            this.panel5.Location = new System.Drawing.Point(694, 136);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(1);
             this.panel5.Size = new System.Drawing.Size(232, 35);
@@ -322,7 +322,7 @@
             this.panel6.Controls.Add(this.btnToggleConfirmPassword);
             this.panel6.Controls.Add(this.txtConfirmPassword);
             this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(10)))), ((int)(((byte)(5)))));
-            this.panel6.Location = new System.Drawing.Point(221, 454);
+            this.panel6.Location = new System.Drawing.Point(694, 186);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(1);
             this.panel6.Size = new System.Drawing.Size(232, 35);
@@ -361,7 +361,7 @@
             this.EditPassword.ForeColor = System.Drawing.Color.White;
             this.EditPassword.Image = global::QuanLyCuaHangTraSua.Properties.Resources.edit;
             this.EditPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EditPassword.Location = new System.Drawing.Point(222, 509);
+            this.EditPassword.Location = new System.Drawing.Point(695, 241);
             this.EditPassword.Name = "EditPassword";
             this.EditPassword.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.EditPassword.Size = new System.Drawing.Size(233, 44);

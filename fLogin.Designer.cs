@@ -40,11 +40,13 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pbDangNhap = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlDangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOnOff)).BeginInit();
             this.pnlMatKhau.SuspendLayout();
             this.pnlTenDangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDangNhap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDangNhap
@@ -58,6 +60,7 @@
             this.pnlDangNhap.Controls.Add(this.pnlTenDangNhap);
             this.pnlDangNhap.Controls.Add(this.label1);
             this.pnlDangNhap.Controls.Add(this.pbDangNhap);
+            this.pnlDangNhap.Controls.Add(this.pictureBox1);
             this.pnlDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDangNhap.Location = new System.Drawing.Point(0, 0);
             this.pnlDangNhap.Name = "pnlDangNhap";
@@ -70,7 +73,7 @@
             // pbOnOff
             // 
             this.pbOnOff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbOnOff.BackgroundImage")));
-            this.pbOnOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbOnOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbOnOff.Location = new System.Drawing.Point(743, 446);
             this.pbOnOff.Name = "pbOnOff";
             this.pbOnOff.Size = new System.Drawing.Size(45, 42);
@@ -166,13 +169,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 29F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.label1.Location = new System.Drawing.Point(360, 117);
+            this.label1.Location = new System.Drawing.Point(424, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 54);
+            this.label1.Size = new System.Drawing.Size(216, 52);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Đăng nhập";
+            this.label1.Text = "Welcome !";
             // 
             // pbDangNhap
             // 
@@ -184,6 +187,17 @@
             this.pbDangNhap.Size = new System.Drawing.Size(328, 500);
             this.pbDangNhap.TabIndex = 0;
             this.pbDangNhap.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(619, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 121);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // fLogin
             // 
@@ -203,6 +217,7 @@
             this.pnlTenDangNhap.ResumeLayout(false);
             this.pnlTenDangNhap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDangNhap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,5 +235,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pbOnOff;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

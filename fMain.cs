@@ -55,7 +55,6 @@ namespace QuanLyCuaHangTraSua
                 btnRevenue.Visible = false;
                 btnFoodAndDninks.Visible = false;
                 btnTable.Visible = true;
-                // Ẩn các nút khác tương tự
             }
             else // Admin
             {
@@ -65,10 +64,8 @@ namespace QuanLyCuaHangTraSua
                 btnRevenue.Visible = true;
                 btnFoodAndDninks.Visible = true;
                 btnTable.Visible = true;
-                // Hiện các nút khác tương tự
             }
-        }
-                    
+        }                    
         #endregion
 
         #region Event              
@@ -76,7 +73,6 @@ namespace QuanLyCuaHangTraSua
         {
             OpenChildUserControl(new ucAccountManagement(), "Quản lý tài khoản", (Control)sender);
         }
-
         private void btnTable_Click(object sender, EventArgs e)
         {
             OpenChildUserControl(new ucTable(), "Bàn ăn", (Control)sender);
@@ -108,7 +104,10 @@ namespace QuanLyCuaHangTraSua
             settingUC.DisplayNameChanged += SettingUC_DisplayNameChanged;
             OpenChildUserControl(new ucSetting(), "Cài đặt", (Control)sender);
         }
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(new ucDashboard(), "Tổng quan", button1);
+        }
         private void fMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
@@ -121,12 +120,17 @@ namespace QuanLyCuaHangTraSua
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenChildUserControl(new ucDashboard(), "Tổng quan", button1);
-        }
+        
         #endregion
 
 
     }
 }
+
+
+
+
+
+
+
+// private System.Windows.Forms.Panel pnlMain;

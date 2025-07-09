@@ -73,15 +73,16 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 60);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(182, 40);
             this.button1.TabIndex = 15;
-            this.button1.Text = "Tổng quan";
+            this.button1.Text = "      Tổng quan";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -136,7 +137,7 @@
             this.btnAccountManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccountManager.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.btnAccountManager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.btnAccountManager.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Account_;
+            this.btnAccountManager.Image = ((System.Drawing.Image)(resources.GetObject("btnAccountManager.Image")));
             this.btnAccountManager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccountManager.Location = new System.Drawing.Point(910, 0);
             this.btnAccountManager.Name = "btnAccountManager";
@@ -158,7 +159,7 @@
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.btnCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.btnCategory.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Category;
+            this.btnCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory.Image")));
             this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategory.Location = new System.Drawing.Point(728, 0);
             this.btnCategory.Name = "btnCategory";
@@ -178,7 +179,7 @@
             this.btnRevenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.btnRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.btnRevenue.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Revenue;
+            this.btnRevenue.Image = ((System.Drawing.Image)(resources.GetObject("btnRevenue.Image")));
             this.btnRevenue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRevenue.Location = new System.Drawing.Point(546, 0);
             this.btnRevenue.Name = "btnRevenue";
@@ -198,7 +199,7 @@
             this.btnFoodAndDninks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFoodAndDninks.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.btnFoodAndDninks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.btnFoodAndDninks.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Food;
+            this.btnFoodAndDninks.Image = ((System.Drawing.Image)(resources.GetObject("btnFoodAndDninks.Image")));
             this.btnFoodAndDninks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFoodAndDninks.Location = new System.Drawing.Point(364, 0);
             this.btnFoodAndDninks.Name = "btnFoodAndDninks";
@@ -219,7 +220,7 @@
             this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.btnTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.btnTable.Image = global::QuanLyCuaHangTraSua.Properties.Resources.Food_Table;
+            this.btnTable.Image = ((System.Drawing.Image)(resources.GetObject("btnTable.Image")));
             this.btnTable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTable.Location = new System.Drawing.Point(182, 0);
             this.btnTable.Name = "btnTable";
