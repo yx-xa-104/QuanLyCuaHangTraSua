@@ -53,8 +53,9 @@ namespace QuanLyCuaHangTraSua.DAO
 
         public void CheckOut(int id, int discount, double totalPrice)
         {
-            string query = "UPDATE dbo.Bill SET dateCheckOut = GETDATE(), status = 1, " + "discount = " + discount + ", totalPrice = " + totalPrice + " WHERE id = " + id;
-            DataProvider.Instance.ExecuteNonQuery(query);
+            // Cập nhật ngày thanh toán, trạng thái, giảm giá và tổng tiền cho hóa đơn
+            string query = "UPDATE dbo.Bill SET dateCheckOut = GETDATE(), status = 1, discount = @discount, totalPrice = @totalPrice WHERE id = @id";
+            DataProvider.Instance.ExecuteNonQuery(query, new object[] { discount, totalPrice, id });
         }
 
         public void SwitchTable(int billId, int newTableId)

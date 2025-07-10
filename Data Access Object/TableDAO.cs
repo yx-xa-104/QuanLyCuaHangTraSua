@@ -69,6 +69,13 @@ namespace QuanLyCuaHangTraSua.DAO
             string deleteQuery = "DELETE dbo.TableFood WHERE id = @id";
             int result = DataProvider.Instance.ExecuteNonQuery(deleteQuery, new object[] { id });
             return result > 0;
+        }        
+        public bool CheckBillExistsForTable(int tableId)
+        {
+            // Chỉ kiểm tra hóa đơn chưa thanh toán
+            string query = "SELECT COUNT(*) FROM dbo.Bill WHERE idTable = @id AND status = 0"; 
+            int billCount = (int)DataProvider.Instance.ExecuteScalar(query, new object[] { tableId });
+            return billCount > 0;
         }
     }
 }

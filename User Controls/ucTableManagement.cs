@@ -16,9 +16,6 @@ namespace QuanLyCuaHangTraSua.UserControls
 {
     public partial class ucTableManagement: UserControl
     {
-        private bool isDiscountApplied = false;
-        private int appliedDiscount = 0;
-
         public ucTableManagement()
         {
             InitializeComponent();
@@ -350,46 +347,34 @@ namespace QuanLyCuaHangTraSua.UserControls
                 return;
             }
 
-            // Lấy tên người xuất hóa đơn từ tài khoản đang đăng nhập
+            // Tải lại tổng tiền gốc từ ListView
+            float totalPrice = 0;
+            foreach (ListViewItem item in lsvBill.Items)
+            {
+                totalPrice += float.Parse(item.SubItems[3].Text, CultureInfo.GetCultureInfo("vi-VN"));
+            }
+
+            // Luôn tính toán lại giá cuối cùng dựa trên giá trị discount hiện tại
+            int discount = (int)nmDiscount.Value;
+            double finalPrice = totalPrice - (totalPrice * discount / 100);
+
             string creatorName = SessionManager.CurrentAccount != null ? SessionManager.CurrentAccount.DisplayName : "N/A";
-            // Lấy danh sách món ăn HIỆN TẠI của hóa đơn TRƯỚC KHI thanh toán
             List<DTO_Menu> currentBillItems = tableBLL.GetMenuByTable(table.ID);
 
-            double totalPrice;
-            if (!double.TryParse(txtTotalPrice.Text.Trim().Replace("₫", "").Replace(".", ""), NumberStyles.Any, CultureInfo.GetCultureInfo("vi-VN"), out totalPrice))
-            {
-                MessageBox.Show("Giá trị tổng tiền không hợp lệ. Vui lòng kiểm tra lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            double finalPrice;
-            int discount;
-
-            if (isDiscountApplied)
-            {
-                discount = appliedDiscount;
-                finalPrice = totalPrice;
-            }
-            else
-            {
-                discount = (int)nmDiscount.Value;
-                finalPrice = totalPrice - (totalPrice * discount / 100);
-                txtTotalPrice.Text = finalPrice.ToString("c", CultureInfo.GetCultureInfo("vi-VN"));
-            }
-
             if (MessageBox.Show(
-                string.Format("Bạn có chắc muốn thanh toán & in hóa đơn cho bàn {0}?\nTổng tiền: {1}", table.Name, txtTotalPrice.Text),
-                "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                string.Format("Bạn có chắc muốn thanh toán cho bàn {0}?\nTổng tiền cuối cùng: {1}", table.Name, finalPrice.ToString("c", CultureInfo.GetCultureInfo("vi-VN"))),
+                "Xác nhận thanh toán", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
-                    ExportBillToPdf(table.Name, currentBillItems, discount, finalPrice, idBill, creatorName); 
-                    ExportToExcel(currentBillItems, table.Name, discount, finalPrice, idBill, creatorName); 
+                    // Xuất hóa đơn PDF và Excel
+                    ExportBillToPdf(table.Name, currentBillItems, discount, finalPrice, idBill, creatorName);
+                    ExportToExcel(currentBillItems, table.Name, discount, finalPrice, idBill, creatorName);
 
-
+                    // Tiến hành checkout
                     tableBLL.CheckOut(idBill, discount, finalPrice);
                     tableBLL.UpdateTableStatus(table.ID, "Trống");
-                    ShowBill(table.ID); // Hàm này sẽ làm trống ListView sau khi thanh toán
+                    ShowBill(table.ID);
                     LoadTable();
 
                     MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -404,16 +389,28 @@ namespace QuanLyCuaHangTraSua.UserControls
         private void btnDiscount_Click(object sender, EventArgs e)
         {
             Table table = lsvBill.Tag as Table;
+            if (table == null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn để áp dụng giảm giá!");
+                return;
+            }
+
             int idBill = tableBLL.GetUncheckBillIdByTable(table.ID);
             if (idBill != -1)
             {
                 int discount = (int)nmDiscount.Value;
-                double totalPrice = double.Parse(txtTotalPrice.Text, NumberStyles.Currency, CultureInfo.GetCultureInfo("vi-VN"));
+
+                // Tải lại tổng tiền gốc từ ListView để đảm bảo tính toán luôn đúng
+                float totalPrice = 0;
+                foreach (ListViewItem item in lsvBill.Items)
+                {
+                    totalPrice += float.Parse(item.SubItems[3].Text, CultureInfo.GetCultureInfo("vi-VN"));
+                }
+
                 double finalPrice = totalPrice - (totalPrice * discount / 100);
-                txtTotalPrice.Text = finalPrice.ToString("c", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"));
-                MessageBox.Show(string.Format("Giảm giá {0}% cho bàn {1} thành công!", discount, table.Name));
-                isDiscountApplied = true;
-                appliedDiscount = discount;
+                txtTotalPrice.Text = finalPrice.ToString("c", CultureInfo.GetCultureInfo("vi-VN")); // Cập nhật lại TextBox tổng tiền
+
+                MessageBox.Show(string.Format("Đã áp dụng giảm giá {0}% cho bàn {1}.", discount, table.Name));
             }
             else
             {
