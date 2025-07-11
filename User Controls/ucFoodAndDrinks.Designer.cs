@@ -79,7 +79,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(705, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 654);
+            this.panel1.Size = new System.Drawing.Size(335, 663);
             this.panel1.TabIndex = 0;
             // 
             // numpPrice
@@ -133,7 +133,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Location = new System.Drawing.Point(10, 313);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -218,7 +218,7 @@
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(705, 654);
+            this.pnlContent.Size = new System.Drawing.Size(705, 663);
             this.pnlContent.TabIndex = 1;
             // 
             // pnlDgv
@@ -230,7 +230,7 @@
             this.pnlDgv.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDgv.Name = "pnlDgv";
             this.pnlDgv.Padding = new System.Windows.Forms.Padding(19, 0, 19, 20);
-            this.pnlDgv.Size = new System.Drawing.Size(705, 541);
+            this.pnlDgv.Size = new System.Drawing.Size(705, 550);
             this.pnlDgv.TabIndex = 7;
             // 
             // dgvFoodAndDrinks
@@ -260,7 +260,7 @@
             this.dgvFoodAndDrinks.Name = "dgvFoodAndDrinks";
             this.dgvFoodAndDrinks.ReadOnly = true;
             this.dgvFoodAndDrinks.RowTemplate.Height = 24;
-            this.dgvFoodAndDrinks.Size = new System.Drawing.Size(667, 521);
+            this.dgvFoodAndDrinks.Size = new System.Drawing.Size(667, 530);
             this.dgvFoodAndDrinks.TabIndex = 0;
             this.dgvFoodAndDrinks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFoodAndDrinks_CellClick);
             // 
@@ -309,7 +309,7 @@
             this.pnlButton.Controls.Add(this.btnEdit);
             this.pnlButton.Controls.Add(this.btnView);
             this.pnlButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlButton.Location = new System.Drawing.Point(0, 602);
+            this.pnlButton.Location = new System.Drawing.Point(0, 611);
             this.pnlButton.Margin = new System.Windows.Forms.Padding(2);
             this.pnlButton.Name = "pnlButton";
             this.pnlButton.Size = new System.Drawing.Size(705, 52);
@@ -405,7 +405,7 @@
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.panel1);
             this.Name = "ucFoodAndDrinks";
-            this.Size = new System.Drawing.Size(1040, 654);
+            this.Size = new System.Drawing.Size(1040, 663);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numpPrice)).EndInit();

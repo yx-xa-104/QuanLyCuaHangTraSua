@@ -6,7 +6,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Panel pnlMain;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -28,6 +27,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
+            System.Windows.Forms.Panel pnlMain;
             this.pnlTop = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.btnTable = new System.Windows.Forms.Button();
             this.btnTableManagement = new System.Windows.Forms.Button();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlMain = new System.Windows.Forms.Panel();
+            pnlMain = new System.Windows.Forms.Panel();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).BeginInit();
             this.SuspendLayout();
@@ -283,7 +283,7 @@
             this.IsMdiContainer = true;
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý của hàng đồ ăn nhanh";
+            this.Text = "Quản lý của hàng trà sữa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fMain_FormClosing);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
