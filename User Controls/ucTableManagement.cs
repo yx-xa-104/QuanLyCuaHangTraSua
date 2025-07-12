@@ -14,7 +14,7 @@ using DTO_Menu = QuanLyCuaHangTraSua.DTO.Menu;
 
 namespace QuanLyCuaHangTraSua.UserControls
 {
-    public partial class ucTableManagement: UserControl
+    public partial class ucTableManagement : UserControl
     {
         public ucTableManagement()
         {
@@ -55,7 +55,19 @@ namespace QuanLyCuaHangTraSua.UserControls
                 flpTable.Controls.Add(btn);
                 btn.Click += btn_Click;
                 btn.Tag = item;
-                btn.BackColor = item.Status == "Trống" ? Color.LightGreen : Color.LightCoral;
+                if (item.Status == "Trống")
+                {
+                    // trống
+                    btn.BackColor = Color.FromArgb(234, 244, 237);
+                    btn.ForeColor = Color.FromArgb(42, 63, 48);
+                }
+                else
+                {
+                    // có người
+                    btn.BackColor = Color.FromArgb(255, 224, 178); 
+                    btn.ForeColor = Color.FromArgb(42, 63, 48);
+                }
+
             }
         }
 
@@ -63,16 +75,18 @@ namespace QuanLyCuaHangTraSua.UserControls
         {
             // Hiển thị thông tin hóa đơn cho bàn
             lsvBill.Items.Clear();
-            var listBillInfo = tableBLL.GetMenuByTable(id);            
+            lsvBill_Payment.Items.Clear(); // Xóa cả ListView trong tab thanh toán
+            var listBillInfo = tableBLL.GetMenuByTable(id);
             float totalPrice = 0;
             foreach (var item in listBillInfo)
             {
                 ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
                 lsvItem.SubItems.Add(item.Count.ToString());
-                lsvItem.SubItems.Add(item.Price.ToString());
-                lsvItem.SubItems.Add(item.TotalPrice.ToString());
+                lsvItem.SubItems.Add(item.Price.ToString("N0", new CultureInfo("vi-VN")));
+                lsvItem.SubItems.Add(item.TotalPrice.ToString("N0", new CultureInfo("vi-VN")));
                 totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvItem);
+                lsvBill_Payment.Items.Add((ListViewItem)lsvItem.Clone()); // Thêm bản sao vào ListView thứ 2
             }
             txtTotalPrice.Text = totalPrice.ToString("c", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"));
         }
@@ -94,7 +108,7 @@ namespace QuanLyCuaHangTraSua.UserControls
             };
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {             
+            {
                 Document doc = new Document(PageSize.A5);
                 BaseFont bf; // Khai báo BaseFont
                 try
@@ -136,7 +150,7 @@ namespace QuanLyCuaHangTraSua.UserControls
                     title.Alignment = Element.ALIGN_CENTER;
                     doc.Add(title);
                     doc.Add(new Paragraph($"Mã hóa đơn: {invoiceId}", normalFont));
-                    doc.Add(new Paragraph($"Người tạo hóa đơn: {creatorName}", normalFont)); 
+                    doc.Add(new Paragraph($"Người tạo hóa đơn: {creatorName}", normalFont));
                     doc.Add(new Paragraph("Ngày: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"), normalFont));
                     doc.Add(Chunk.NEWLINE);
 
@@ -272,7 +286,8 @@ namespace QuanLyCuaHangTraSua.UserControls
             // Lấy đối tượng Table từ Tag của nút
             Table table = (sender as Button).Tag as Table;
             // Kiểm tra nếu table không null
-            lsvBill.Tag = (sender as Button).Tag;
+            lsvBill.Tag = table;
+            lsvBill_Payment.Tag = table; // Gán Tag cho cả ListView thứ 2
             ShowBill(table.ID);
         }
 
@@ -326,7 +341,7 @@ namespace QuanLyCuaHangTraSua.UserControls
             // Nếu đã có hóa đơn thì thêm món vào hóa đơn đó
             int foodID = (cbFoodAndDrinks.SelectedItem as Food).ID;
             int count = (int)nmFoodCount.Value;
-            
+
             ShowBill(table.ID);
             LoadTable();
         }
@@ -384,7 +399,7 @@ namespace QuanLyCuaHangTraSua.UserControls
                     MessageBox.Show("Đã xảy ra lỗi trong quá trình thanh toán: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }        
+        }
 
         private void btnDiscount_Click(object sender, EventArgs e)
         {
@@ -459,6 +474,7 @@ namespace QuanLyCuaHangTraSua.UserControls
             LoadTableComboBox();
             ShowBill(targetTable.ID);
             lsvBill.Tag = targetTable;
+            lsvBill_Payment.Tag = targetTable;
         }
         #endregion
     }

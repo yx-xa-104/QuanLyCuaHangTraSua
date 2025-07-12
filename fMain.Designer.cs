@@ -6,6 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Panel pnlMain;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -27,7 +28,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
-            System.Windows.Forms.Panel pnlMain;
             this.pnlTop = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -40,10 +40,19 @@
             this.btnTable = new System.Windows.Forms.Button();
             this.btnTableManagement = new System.Windows.Forms.Button();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
-            pnlMain = new System.Windows.Forms.Panel();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSetting)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pnlMain
+            // 
+            pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlMain.Location = new System.Drawing.Point(0, 100);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Size = new System.Drawing.Size(1280, 628);
+            pnlMain.TabIndex = 2;
             // 
             // pnlTop
             // 
@@ -116,7 +125,7 @@
             // 
             // lblCurrentUser
             // 
-            this.lblCurrentUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCurrentUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCurrentUser.AutoSize = true;
             this.lblCurrentUser.BackColor = System.Drawing.Color.Transparent;
             this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
@@ -255,20 +264,11 @@
             // 
             // flpMenu
             // 
-            this.flpMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.flpMenu.Location = new System.Drawing.Point(0, 0);
             this.flpMenu.Name = "flpMenu";
-            this.flpMenu.Size = new System.Drawing.Size(1279, 100);
+            this.flpMenu.Size = new System.Drawing.Size(1280, 100);
             this.flpMenu.TabIndex = 14;
-            // 
-            // pnlMain
-            // 
-            pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
-            pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            pnlMain.Location = new System.Drawing.Point(0, 100);
-            pnlMain.Name = "pnlMain";
-            pnlMain.Size = new System.Drawing.Size(1280, 628);
-            pnlMain.TabIndex = 2;
             // 
             // fMain
             // 
