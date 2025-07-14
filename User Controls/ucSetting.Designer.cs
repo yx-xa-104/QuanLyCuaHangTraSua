@@ -355,7 +355,7 @@
             // 
             // EditPassword
             // 
-            this.EditPassword.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.EditPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
             this.EditPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditPassword.ForeColor = System.Drawing.Color.White;
