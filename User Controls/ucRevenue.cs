@@ -14,6 +14,7 @@ using QuanLyCuaHangTraSua.BLL;
 
 namespace QuanLyCuaHangTraSua.UserControls
 {
+    // User Control hiển thị doanh thu
     public partial class ucRevenue: UserControl
     {
         public ucRevenue()
