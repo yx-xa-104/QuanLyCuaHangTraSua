@@ -51,7 +51,7 @@
             // 
             // pnlCardRevenue
             // 
-            this.pnlCardRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
+            this.pnlCardRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))), ((int)(((byte)(44)))));
             this.pnlCardRevenue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCardRevenue.Controls.Add(this.label2);
             this.pnlCardRevenue.Controls.Add(this.lblRevenueToday);
@@ -93,7 +93,7 @@
             // 
             // pnlCardBills
             // 
-            this.pnlCardBills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
+            this.pnlCardBills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))), ((int)(((byte)(44)))));
             this.pnlCardBills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCardBills.Controls.Add(this.label1);
             this.pnlCardBills.Controls.Add(this.lblBillToday);
@@ -135,7 +135,7 @@
             // 
             // pnlCardTables
             // 
-            this.pnlCardTables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
+            this.pnlCardTables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))), ((int)(((byte)(44)))));
             this.pnlCardTables.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCardTables.Controls.Add(this.label4);
             this.pnlCardTables.Controls.Add(this.lblTableNow);
@@ -180,6 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.pnlCardTables);
             this.Controls.Add(this.pnlCardBills);
             this.Controls.Add(this.pnlCardRevenue);
