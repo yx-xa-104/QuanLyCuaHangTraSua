@@ -34,7 +34,6 @@ namespace QuanLyCuaHangTraSua.DAO
             return result.Rows.Count > 0; // Trả về true nếu có ít nhất một tài khoản khớp với thông tin đăng nhập
         }
 
-
         // Lấy thông tin tài khoản bằng UserName
         public Account GetAccountByUserName(string userName)
         {

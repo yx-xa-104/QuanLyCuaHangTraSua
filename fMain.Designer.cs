@@ -89,7 +89,7 @@
             this.button1.Location = new System.Drawing.Point(0, 60);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(182, 40);
+            this.button1.Size = new System.Drawing.Size(90, 40);
             this.button1.TabIndex = 15;
             this.button1.Text = "      Tổng quan";
             this.button1.UseVisualStyleBackColor = false;

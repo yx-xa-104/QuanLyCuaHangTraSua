@@ -66,6 +66,7 @@
             this.pnlDangNhap.Name = "pnlDangNhap";
             this.pnlDangNhap.Size = new System.Drawing.Size(800, 500);
             this.pnlDangNhap.TabIndex = 0;
+            this.pnlDangNhap.Enter += new System.EventHandler(this.pnlDangNhap_Enter);
             this.pnlDangNhap.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlDangNhap_MouseDown);
             this.pnlDangNhap.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlDangNhap_MouseMove);
             this.pnlDangNhap.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlDangNhap_MouseUp);
@@ -141,6 +142,7 @@
             this.txtPassword.Size = new System.Drawing.Size(363, 38);
             this.txtPassword.TabIndex = 0;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             // 
             // pnlTenDangNhap
             // 
@@ -209,6 +211,7 @@
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fLogin";
+            this.Enter += new System.EventHandler(this.fLogin_Enter);
             this.pnlDangNhap.ResumeLayout(false);
             this.pnlDangNhap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOnOff)).EndInit();

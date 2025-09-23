@@ -8,9 +8,9 @@ namespace QuanLyCuaHangTraSua
 {
     public partial class fLogin: Form
     {     
-        private bool isDragging = false; // Biến cờ để kiểm tra xem form có đang được kéo hay không
-        private Point lastLocation;    // Lưu trữ vị trí cuối cùng của chuột
-        
+        private bool isDragging = false; // Biến cờ để kiểm tra xem form có đang được kéo hay không (Kiểm soát trạng thái)
+        private Point lastLocation;    // Lưu trữ vị trí cuối cùng của chuột (vị trí cuối cùng mình đã nhấn chuột)
+
         public fLogin()
         {
             InitializeComponent();
@@ -70,6 +70,31 @@ namespace QuanLyCuaHangTraSua
                 // Nếu đăng nhập thất bại, hiển thị thông báo lỗi
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+        private void pnlDangNhap_Enter(object sender, EventArgs e)
+        {
+            // Bấm đăng nhập khi Enter vào panel đăng nhập
+            if (txtUserName.Text.Trim() != "" && txtPassword.Text.Trim() != "")
+            {
+                btnLogin.PerformClick(); // Gọi sự kiện click của nút đăng nhập
+            }
+        }
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            // Bấm đăng nhập khi Enter vào ô mật khẩu
+            if (txtUserName.Text.Trim() != "" && txtPassword.Text.Trim() != "")
+            {
+                btnLogin.PerformClick(); // Gọi sự kiện click của nút đăng nhập
+            }
+        }
+        private void fLogin_Enter(object sender, EventArgs e)
+        {
+            // Ân nút đăng nhập khi Enter vào form đăng nhập
+            if (txtUserName.Text.Trim() != "" && txtPassword.Text.Trim() != "")
+            {
+                btnLogin.PerformClick(); // Gọi sự kiện click của nút đăng nhập
+            }
         }
         #endregion
 
@@ -79,5 +104,7 @@ namespace QuanLyCuaHangTraSua
             return AccountDAO.Instance.Login(userName, password);
         }
         #endregion
+
+        
     }
 }

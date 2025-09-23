@@ -21,7 +21,7 @@ namespace QuanLyCuaHangTraSua
             SetMenuByRole(); // Thiết lập menu dựa trên vai trò người dùng
         }
 
-        #region Method
+ #region Method
         private void OpenChildUserControl(UserControl userControl, string title, Control activeControl)
         {
             // Cập nhật Text của Label tiêu đề
@@ -68,7 +68,7 @@ namespace QuanLyCuaHangTraSua
         }                    
         #endregion
 
-        #region Event              
+ #region Event              
         private void btnAccountManager_Click(object sender, EventArgs e)
         {
             OpenChildUserControl(new ucAccountManagement(), "Quản lý tài khoản", (Control)sender);
