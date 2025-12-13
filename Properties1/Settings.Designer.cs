@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyCuaHangTraSua.Properties {
+namespace QuanLyCuaHangTraSua.Properties1 {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -28,9 +28,9 @@ namespace QuanLyCuaHangTraSua.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=QuanLyCuaHangTraSua;Integrated" +
             " Security=True;TrustServerCertificate=True")]
-        public string connectionString {
+        public string ConnectionString {
             get {
-                return ((string)(this["connectionString"]));
+                return ((string)(this["ConnectionString"]));
             }
         }
     }

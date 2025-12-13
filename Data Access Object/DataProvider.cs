@@ -26,7 +26,7 @@ namespace QuanLyCuaHangTraSua.DAO
         private DataProvider() { }
 
         // Connection string to the database, retrieved from application settings
-        private string connString = Properties.Settings.Default.ConnectionString;
+        private string connString = Properties1.Settings.Default.ConnectionString;
 
         // Executes a SQL query and returns the result as a DataTable
         public DataTable ExecuteQuery(string query, object[] parameter = null) 
