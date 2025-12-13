@@ -64,7 +64,7 @@
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.btnView.Image = global::QuanLyCuaHangTraSua.Properties.Resources.view;
+            this.btnView.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.view1;
             this.btnView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnView.Location = new System.Drawing.Point(182, 148);
             this.btnView.Name = "btnView";
@@ -85,7 +85,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Image = global::QuanLyCuaHangTraSua.Properties.Resources.delete;
+            this.btnDelete.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(6, 148);
             this.btnDelete.Name = "btnDelete";
@@ -107,7 +107,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(63)))), ((int)(((byte)(48)))));
-            this.btnEdit.Image = global::QuanLyCuaHangTraSua.Properties.Resources.edit;
+            this.btnEdit.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.edit;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(182, 87);
             this.btnEdit.Name = "btnEdit";
@@ -128,7 +128,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
-            this.btnAdd.Image = global::QuanLyCuaHangTraSua.Properties.Resources.add;
+            this.btnAdd.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.add;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.Location = new System.Drawing.Point(6, 87);
             this.btnAdd.Name = "btnAdd";

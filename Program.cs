@@ -9,7 +9,7 @@ namespace QuanLyCuaHangTraSua
     static class Program
     {
 
-        // The main entry point for the application
+        // Màn hình đăng nhập
         [STAThread]
         static void Main()
         {

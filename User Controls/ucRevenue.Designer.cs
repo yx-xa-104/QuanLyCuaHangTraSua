@@ -272,7 +272,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyCuaHangTraSua.Properties.Resources.money;
+            this.pictureBox1.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.money;
             this.pictureBox1.Location = new System.Drawing.Point(170, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 36);
@@ -294,7 +294,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::QuanLyCuaHangTraSua.Properties.Resources.bill;
+            this.pictureBox2.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.bill;
             this.pictureBox2.Location = new System.Drawing.Point(175, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 36);

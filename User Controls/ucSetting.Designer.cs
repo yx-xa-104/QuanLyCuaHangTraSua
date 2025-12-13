@@ -258,7 +258,7 @@
             this.btnToggleOldPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
             this.btnToggleOldPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggleOldPassword.ForeColor = System.Drawing.Color.Transparent;
-            this.btnToggleOldPassword.Image = global::QuanLyCuaHangTraSua.Properties.Resources.view1;
+            this.btnToggleOldPassword.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.view1;
             this.btnToggleOldPassword.Location = new System.Drawing.Point(199, 3);
             this.btnToggleOldPassword.Name = "btnToggleOldPassword";
             this.btnToggleOldPassword.Size = new System.Drawing.Size(29, 28);
@@ -296,7 +296,7 @@
             this.btnToggleNewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
             this.btnToggleNewPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggleNewPassword.ForeColor = System.Drawing.Color.Transparent;
-            this.btnToggleNewPassword.Image = global::QuanLyCuaHangTraSua.Properties.Resources.view1;
+            this.btnToggleNewPassword.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.view1;
             this.btnToggleNewPassword.Location = new System.Drawing.Point(199, 4);
             this.btnToggleNewPassword.Name = "btnToggleNewPassword";
             this.btnToggleNewPassword.Size = new System.Drawing.Size(29, 27);
@@ -333,7 +333,7 @@
             this.btnToggleConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
             this.btnToggleConfirmPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggleConfirmPassword.ForeColor = System.Drawing.Color.Transparent;
-            this.btnToggleConfirmPassword.Image = global::QuanLyCuaHangTraSua.Properties.Resources.view1;
+            this.btnToggleConfirmPassword.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.view1;
             this.btnToggleConfirmPassword.Location = new System.Drawing.Point(199, 4);
             this.btnToggleConfirmPassword.Name = "btnToggleConfirmPassword";
             this.btnToggleConfirmPassword.Size = new System.Drawing.Size(29, 27);
@@ -359,7 +359,7 @@
             this.EditPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditPassword.ForeColor = System.Drawing.Color.White;
-            this.EditPassword.Image = global::QuanLyCuaHangTraSua.Properties.Resources.edit;
+            this.EditPassword.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.edit;
             this.EditPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EditPassword.Location = new System.Drawing.Point(695, 241);
             this.EditPassword.Name = "EditPassword";
@@ -376,7 +376,7 @@
             this.btnEditDisplayName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditDisplayName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditDisplayName.ForeColor = System.Drawing.Color.White;
-            this.btnEditDisplayName.Image = global::QuanLyCuaHangTraSua.Properties.Resources.edit;
+            this.btnEditDisplayName.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.edit;
             this.btnEditDisplayName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditDisplayName.Location = new System.Drawing.Point(222, 246);
             this.btnEditDisplayName.Name = "btnEditDisplayName";

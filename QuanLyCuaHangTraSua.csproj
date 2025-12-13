@@ -66,8 +66,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>QuanLyCuaHangTraSua.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Azure.Core, Version=1.46.2.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
@@ -263,6 +262,16 @@
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Properties1\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties1\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\ucAccountManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -318,6 +327,10 @@
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties1\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ucAccountManagement.resx">
       <DependentUpon>ucAccountManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,7 +356,10 @@
       <DependentUpon>ucTableManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="QuanLyCuaHangTraSua_TemporaryKey.pfx" />
+    <None Include="Properties1\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
