@@ -362,10 +362,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 App.config
-Properties/Settings.Designer.cs
-Properties/Settings.settings
 
 /Images/Food And Drinks
 *.config
-/Properties
-Properties/Settings.Designer.cs

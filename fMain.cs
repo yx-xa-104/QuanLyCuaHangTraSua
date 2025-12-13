@@ -9,14 +9,14 @@ namespace QuanLyCuaHangTraSua
 {
     public partial class fMain: Form
     {
-        private UserControl currentChildUserControl; // Để theo dõi User Control đang hiển thị
+        private UserControl currentChildUserControl; // Theo dõi User Control đang hiển thị
                
         // Khai báo biến toàn cục trong MainForm
-        bool isMenuExpanded = true; // Ban đầu menu đang mở rộng
+        bool isMenuExpanded = true; 
         public fMain()
         {
             InitializeComponent();
-            // Mở trang tổngg quan khi khởi động ứng dụng
+            // Mở trang tổngg quan khi khởi động
             button1_Click(button1, EventArgs.Empty);
             SetMenuByRole(); // Thiết lập menu dựa trên vai trò người dùng
         }
@@ -25,19 +25,18 @@ namespace QuanLyCuaHangTraSua
         private void OpenChildUserControl(UserControl userControl, string title, Control activeControl)
         {
             // Cập nhật Text của Label tiêu đề
-            lblTitle.Text = title; // lblTitle là tên của Label trên top
+            lblTitle.Text = title;
             lblCurrentUser.Text = SessionManager.CurrentAccount.DisplayName;
-            // Nếu đã có User Control đang hiển thị, giải phóng nó
             if (currentChildUserControl != null)
             {
                 currentChildUserControl.Dispose();
             }
 
             currentChildUserControl = userControl;
-            userControl.Dock = DockStyle.Fill; // Đảm bảo User Control lấp đầy Panel
+            userControl.Dock = DockStyle.Fill; 
 
-            this.pnlMain.Controls.Clear();    // Xóa tất cả các controls hiện có trong panel
-            this.pnlMain.Controls.Add(userControl); // Thêm User Control mới vào panel
+            this.pnlMain.Controls.Clear();    
+            this.pnlMain.Controls.Add(userControl);
           
         }
 
@@ -45,6 +44,7 @@ namespace QuanLyCuaHangTraSua
         {                    
         }
 
+        // Thiết lập menu dựa trên vai trò người dùng
         private void SetMenuByRole()
         {
             if (SessionManager.CurrentAccount != null && SessionManager.CurrentAccount.Type == 0) // Nhân viên
