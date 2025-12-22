@@ -255,7 +255,7 @@
             // 
             // btnToggleOldPassword
             // 
-            this.btnToggleOldPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            this.btnToggleOldPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnToggleOldPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggleOldPassword.ForeColor = System.Drawing.Color.Transparent;
             this.btnToggleOldPassword.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.view1;
@@ -293,7 +293,7 @@
             // 
             // btnToggleNewPassword
             // 
-            this.btnToggleNewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            this.btnToggleNewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnToggleNewPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggleNewPassword.ForeColor = System.Drawing.Color.Transparent;
             this.btnToggleNewPassword.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.view1;
@@ -330,7 +330,7 @@
             // 
             // btnToggleConfirmPassword
             // 
-            this.btnToggleConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            this.btnToggleConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnToggleConfirmPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggleConfirmPassword.ForeColor = System.Drawing.Color.Transparent;
             this.btnToggleConfirmPassword.Image = global::QuanLyCuaHangTraSua.Properties1.Resources.view1;

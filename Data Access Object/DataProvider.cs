@@ -16,7 +16,7 @@ namespace QuanLyCuaHangTraSua.DAO
     {
         private static DataProvider instance;
 
-        // Singleton property to get the single instance of DataProvider
+        // Trả về một thể hiện duy nhất của DataProvider (Singleton Pattern)
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return instance; }
@@ -25,10 +25,10 @@ namespace QuanLyCuaHangTraSua.DAO
 
         private DataProvider() { }
 
-        // Connection string to the database, retrieved from application settings
+        // Chuỗi kết nối đến cơ sở dữ liệu, lấy từ tệp cấu hình
         private string connString = Properties1.Settings.Default.ConnectionString;
 
-        // Executes a SQL query and returns the result as a DataTable
+        // Chạy một câu lệnh SQL và trả về kết quả dưới dạng DataTable
         public DataTable ExecuteQuery(string query, object[] parameter = null) 
         {
             DataTable data = new DataTable();

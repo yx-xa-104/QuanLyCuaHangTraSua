@@ -86,6 +86,7 @@ namespace QuanLyCuaHangTraSua.DAO
             return result > 0;
         }
 
+        // Hàm băm mật khẩu sử dụng SHA256
         private string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())

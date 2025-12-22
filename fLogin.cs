@@ -48,12 +48,14 @@ namespace QuanLyCuaHangTraSua
         {
             Application.Exit();
             
-        }       
+        }
+
+        // Sự kiện khi nhấn nút đăng nhập
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = txtUserName.Text.Trim(); // Lấy tên đăng nhập từ TextBox
-            string password = txtPassword.Text.Trim(); // Lấy mật khẩu từ TextBox
-                                                       // Kiểm tra thông tin đăng nhập
+            string password = txtPassword.Text.Trim(); // Lấy mật khẩu từ TextBox            
+            // Kiểm tra thông tin đăng nhập
             if (Login(userName, password))
             {
                 // Gán tài khoản đăng nhập vào SessionManager
@@ -77,7 +79,7 @@ namespace QuanLyCuaHangTraSua
             // Bấm đăng nhập khi Enter vào panel đăng nhập
             if (txtUserName.Text.Trim() != "" && txtPassword.Text.Trim() != "")
             {
-                btnLogin.PerformClick(); // Gọi sự kiện click của nút đăng nhập
+                btnLogin.PerformClick();
             }
         }
         private void txtPassword_Enter(object sender, EventArgs e)
@@ -85,7 +87,7 @@ namespace QuanLyCuaHangTraSua
             // Bấm đăng nhập khi Enter vào ô mật khẩu
             if (txtUserName.Text.Trim() != "" && txtPassword.Text.Trim() != "")
             {
-                btnLogin.PerformClick(); // Gọi sự kiện click của nút đăng nhập
+                btnLogin.PerformClick();
             }
         }
         private void fLogin_Enter(object sender, EventArgs e)
@@ -93,12 +95,13 @@ namespace QuanLyCuaHangTraSua
             // Ân nút đăng nhập khi Enter vào form đăng nhập
             if (txtUserName.Text.Trim() != "" && txtPassword.Text.Trim() != "")
             {
-                btnLogin.PerformClick(); // Gọi sự kiện click của nút đăng nhập
+                btnLogin.PerformClick();
             }
         }
         #endregion
 
         #region Method
+        // Phương thức kiểm tra đăng nhập
         bool Login(string userName, string password)
         {
             return AccountDAO.Instance.Login(userName, password);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyCuaHangTraSua.DTO
 {
-    // Lớp DTO (Data Transfer Object) cho tài khoản người dùng.
+    // Lớp DTO cho tài khoản người dùng
     public class Account
     {
         public Account(string userName, string displayName, int type, string password = null)

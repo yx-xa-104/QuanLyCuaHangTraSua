@@ -25,6 +25,7 @@ namespace QuanLyCuaHangTraSua.UserControls
         // Biến để xác định chế độ thêm mới
         private bool isAddNewMode = false;
 
+        // Tải danh sách tài khoản từ CSDL và hiển thị lên DataGridView
         void LoadAccountList()
         {
             string query = "SELECT UserName AS [Tên tài khoản], DisplayName AS [Tên hiển thị], CASE Type WHEN 1 THEN 'Admin' ELSE 'Nhân viên' END AS [Loại tài khoản] FROM dbo.Account";
@@ -89,7 +90,6 @@ namespace QuanLyCuaHangTraSua.UserControls
                 txtUserName.Text = "";
                 txtDisplayName.Text = "";
                 cbType.SelectedIndex = 1; // Mặc định là "Nhân viên"
-
                 txtUserName.ReadOnly = false; // Cho phép nhập tên tài khoản
             }
         }
@@ -103,7 +103,8 @@ namespace QuanLyCuaHangTraSua.UserControls
                 SetBinding();
             }
         }
-        
+
+        // Xử lý sự kiện nút Thêm, Sửa, Xóa, Xem, Đặt lại mật khẩu
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try

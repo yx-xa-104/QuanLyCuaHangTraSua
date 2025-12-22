@@ -9,6 +9,8 @@ namespace QuanLyCuaHangTraSua.DTO
 {
     public class Bill
     {
+        // Constructor với các tham số
+        // Sử dụng để truyền dữ liệu
         public Bill(int id, DateTime? dateCheckIn, DateTime? dateCheckOut, int status, int discount = 0)
         {
             this.ID = id;

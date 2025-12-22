@@ -104,10 +104,11 @@ BEGIN
 END
 GO
 
--- CÁC STORED PROCEDURES (USP)
+
+-- CÁC STORED PROCEDURES (USP) --
 
 -- 1. USP_Login
--- Được gọi trong AccountDAO
+-- Gọi trong AccountDAO
 CREATE PROC USP_Login
 @userName NVARCHAR(100), @passWord NVARCHAR(100)
 AS
@@ -117,13 +118,13 @@ END
 GO
 
 -- 2. USP_GetTableList
--- Được gọi trong TableDAO
+-- Gọi trong TableDAO
 CREATE PROC USP_GetTableList
 AS SELECT * FROM dbo.TableFood
 GO
 
 -- 3. USP_InsertBill
--- Được gọi trong BillDAO
+-- Gọi trong BillDAO
 CREATE PROC USP_InsertBill
 @idTable INT
 AS
@@ -148,7 +149,7 @@ END
 GO
 
 -- 4. USP_InsertBillInfo
--- Được gọi trong BillInfoDAO
+-- Gọi trong BillInfoDAO
 -- Logic: Nếu món đã tồn tại trong Bill đó rồi thì cộng dồn số lượng, chưa có thì thêm mới.
 CREATE PROC USP_InsertBillInfo
 @idBill INT, @idFood INT, @count INT
@@ -177,7 +178,7 @@ END
 GO
 
 -- 5. USP_GetListBillByDate
--- Được gọi trong BillDAO để thống kê doanh thu
+-- Gọi trong BillDAO để thống kê doanh thu
 CREATE PROC USP_GetListBillByDate
 @checkIn date, @checkOut date
 AS 
@@ -189,8 +190,9 @@ BEGIN
 END
 GO
 
-
--- DỮ LIỆU MẪU (SEED DATA)
+--------------------------------
+-- DỮ LIỆU MẪU (SEED DATA) --
+--------------------------------
 INSERT INTO dbo.Account (UserName, DisplayName, PassWord, Type)
 VALUES (N'admin', N'Quản trị viên', N'5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9', 1)
 

@@ -319,6 +319,7 @@ namespace QuanLyCuaHangTraSua.UserControls
             if (idBill == -1)
             {
                 tableBLL.CreateBill(table.ID);
+                tableBLL.UpdateTableStatus(table.ID, "Có người");
                 idBill = tableBLL.GetMaxBillId();
             }
             // Thêm món ăn vào hóa đơn
@@ -335,8 +336,6 @@ namespace QuanLyCuaHangTraSua.UserControls
             }
             // Thêm món ăn vào hóa đơn
             tableBLL.AddFoodToBill(idBill, (cbFoodAndDrinks.SelectedItem as Food).ID, (int)nmFoodCount.Value);
-
-
 
             // Nếu đã có hóa đơn thì thêm món vào hóa đơn đó
             int foodID = (cbFoodAndDrinks.SelectedItem as Food).ID;

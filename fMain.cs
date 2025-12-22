@@ -65,10 +65,12 @@ namespace QuanLyCuaHangTraSua
                 btnFoodAndDninks.Visible = true;
                 btnTable.Visible = true;
             }
-        }                    
+        }
         #endregion
 
- #region Event              
+#region Event              
+
+        // Xử lý sự kiện click cho các nút menu
         private void btnAccountManager_Click(object sender, EventArgs e)
         {
             OpenChildUserControl(new ucAccountManagement(), "Quản lý tài khoản", (Control)sender);

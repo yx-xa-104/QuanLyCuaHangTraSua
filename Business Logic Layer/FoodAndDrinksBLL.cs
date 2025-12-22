@@ -9,6 +9,7 @@ using System.Linq;
 
 namespace QuanLyCuaHangTraSua.BLL
 {
+    // Business Logic Layer for Food and Drinks
     public class FoodAndDrinksBLL
     {
         public Image LoadImage(string relativePath)
