@@ -57,6 +57,7 @@
             this.btnDiscount = new System.Windows.Forms.Button();
             this.btnSwitchTable = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
+            this.btnHuyMon = new System.Windows.Forms.Button();
             this.pnlTable.SuspendLayout();
             this.tabControlManagement.SuspendLayout();
             this.tabPageOrder.SuspendLayout();
@@ -167,6 +168,7 @@
             // pnlOrder
             // 
             this.pnlOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            this.pnlOrder.Controls.Add(this.btnHuyMon);
             this.pnlOrder.Controls.Add(this.nmFoodCount);
             this.pnlOrder.Controls.Add(this.btnAdd);
             this.pnlOrder.Controls.Add(this.cbFoodAndDrinks);
@@ -182,7 +184,7 @@
             this.nmFoodCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nmFoodCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(244)))), ((int)(((byte)(237)))));
             this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.nmFoodCount.Location = new System.Drawing.Point(424, 39);
+            this.nmFoodCount.Location = new System.Drawing.Point(425, 14);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
             0,
@@ -402,6 +404,24 @@
             this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
+            // btnHuyMon
+            // 
+            this.btnHuyMon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuyMon.BackColor = System.Drawing.Color.LightCoral;
+            this.btnHuyMon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnHuyMon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnHuyMon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(116)))));
+            this.btnHuyMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuyMon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnHuyMon.ForeColor = System.Drawing.Color.Black;
+            this.btnHuyMon.Location = new System.Drawing.Point(420, 55);
+            this.btnHuyMon.Name = "btnHuyMon";
+            this.btnHuyMon.Size = new System.Drawing.Size(60, 34);
+            this.btnHuyMon.TabIndex = 4;
+            this.btnHuyMon.Text = "Hủy";
+            this.btnHuyMon.UseVisualStyleBackColor = false;
+            this.btnHuyMon.Click += new System.EventHandler(this.btnHuyMon_Click);
+            // 
             // ucTableManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,5 +477,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.Button btnHuyMon;
     }
 }

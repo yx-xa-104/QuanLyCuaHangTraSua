@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Panel pnlMain;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,12 +48,12 @@
             // 
             // pnlMain
             // 
-            pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
-            pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            pnlMain.Location = new System.Drawing.Point(0, 100);
-            pnlMain.Name = "pnlMain";
-            pnlMain.Size = new System.Drawing.Size(1280, 628);
-            pnlMain.TabIndex = 2;
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(247)))));
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(0, 100);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1280, 628);
+            this.pnlMain.TabIndex = 2;
             // 
             // pnlTop
             // 
@@ -89,7 +90,7 @@
             this.button1.Location = new System.Drawing.Point(0, 60);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(90, 40);
+            this.button1.Size = new System.Drawing.Size(182, 40);
             this.button1.TabIndex = 15;
             this.button1.Text = "      Tổng quan";
             this.button1.UseVisualStyleBackColor = false;
@@ -276,7 +277,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 728);
-            this.Controls.Add(pnlMain);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlTop);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

@@ -475,6 +475,46 @@ namespace QuanLyCuaHangTraSua.UserControls
             lsvBill.Tag = targetTable;
             lsvBill_Payment.Tag = targetTable;
         }
+
+        private void btnHuyMon_Click(object sender, EventArgs e)
+        {
+            // Lấy thông tin bàn đang chọn
+            Table table = lsvBill.Tag as Table;
+
+            if (table == null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn cần hủy hóa đơn!", "Thông báo");
+                return;
+            }
+
+            // Lấy ID của hóa đơn chưa thanh toán (Bill hiện tại của bàn)
+            int idBill = tableBLL.GetUncheckBillIdByTable(table.ID);
+
+            if (idBill != -1)
+            {
+                if (MessageBox.Show(string.Format("Bạn có chắc chắn muốn xóa hóa đơn của bàn {0}?\nMọi dữ liệu món ăn đã gọi sẽ bị mất vĩnh viễn.", table.Name),
+                                    "Cảnh báo",
+                                    MessageBoxButtons.OKCancel,
+                                    MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    // Gọi hàm xóa hóa đơn
+                    tableBLL.CancelBill(idBill);
+                    tableBLL.UpdateTableStatus(table.ID, "Trống");
+
+                    // Cập nhật lại giao diện
+                    ShowBill(table.ID); // Làm sạch danh sách món (lsvBill)
+                    LoadTable();
+
+                    MessageBox.Show("Đã hủy hóa đơn và trả bàn thành công!", "Thông báo");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bàn này hiện không có hóa đơn nào để hủy!", "Thông báo");
+            }
+        }
         #endregion
+
+
     }
 }

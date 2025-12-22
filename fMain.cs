@@ -9,8 +9,7 @@ namespace QuanLyCuaHangTraSua
 {
     public partial class fMain: Form
     {
-        private UserControl currentChildUserControl; // Theo dõi User Control đang hiển thị
-               
+        private UserControl currentChildUserControl; // Theo dõi User Control đang hiển thị       
         // Khai báo biến toàn cục trong MainForm
         bool isMenuExpanded = true; 
         public fMain()

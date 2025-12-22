@@ -65,5 +65,9 @@ namespace QuanLyCuaHangTraSua.BLL
         {
             TableDAO.Instance.UpdateTableStatus(tableId, status);
         }
+        public void CancelBill(int idBill)
+        {
+            BillDAO.Instance.DeleteBill(idBill);
+        }
     }
 }

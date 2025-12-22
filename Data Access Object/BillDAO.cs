@@ -93,6 +93,16 @@ namespace QuanLyCuaHangTraSua.DAO
             DataProvider.Instance.ExecuteNonQuery(deleteBill, new object[] { sourceBillId });
         }
 
+        // Xóa Bill và các BillInfo liên quan
+        public void DeleteBill(int idBill)
+        {
+            // Xóa tất cả các món ăn trong BillInfo thuộc về Bill này trước 
+            DataProvider.Instance.ExecuteNonQuery("DELETE dbo.BillInfo WHERE idBill = " + idBill);
+
+            // Sau đó xóa Bill
+            DataProvider.Instance.ExecuteNonQuery("DELETE dbo.Bill WHERE id = " + idBill);
+        }
+
         public DataTable GetListBillByDate(DateTime checkIn, DateTime checkOut)
         {
             string query = "EXEC USP_GetListBillByDate @checkIn , @checkOut";
